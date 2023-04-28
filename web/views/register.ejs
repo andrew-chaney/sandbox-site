@@ -1,0 +1,97 @@
+<%- include ('./partials/header') %>
+
+<div
+  class="bg-no-repeat bg-cover bg-center relative"
+  id="img"
+  style="
+    background-image: url('https://www.slidebackground.com/thumb/purple-background/dark-purple-backgrounds-wallpaper-cave-1.jpg');
+    "
+>
+  <div class="min-h-screen sm:flex sm:flex-row mx-0 justify-center">
+    <div class="flex justify-center self-center z-10">
+      <div class="p-12 bg-white mx-auto rounded-2xl w-100" id="form-field">
+        <h1
+          class="mb-3 font-bold italic text-5xl heading-text text-center text-gray-800"
+        >
+          Sandbox Site
+        </h1>
+        <div class="col"><%- include ('./partials/message') %></div>
+        <div class="mb-4">
+          <h3 class="font-semibold text-2xl text-gray-800">Register</h3>
+          <p class="text-gray-500">Please register your account</p>
+        </div>
+        <form method="POST" action="/register">
+          <div class="space-y-5">
+            <div class="space-y-2">
+              <label
+                class="mb-5 text-sm font-medium text-gray-700 tracking-wide"
+                >Username</label
+              >
+              <input
+                class="w-full content-center text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-400"
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter your username"
+              />
+            </div>
+            <div class="space-y-2">
+              <label
+                class="mb-5 text-sm font-medium text-gray-700 tracking-wide"
+                >Password</label
+              >
+              <input
+                class="w-full content-center text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-400"
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+              />
+            </div>
+            <div>
+              <button
+                type="submit"
+                class="w-full flex justify-center btn btn-primary text-gray-800 hover:text-gray-200 p-3 rounded-full tracking-wide font-semibold shadow-lg cursor-pointer transition ease-in duration-250"
+                >
+                Register account
+              </button>
+            </div>
+            <div class="text-sm" id="register-field">
+              <a href="/login" class="btn btn-link"> Sign into an account </a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include ('./partials/footer') %>
+
+<style>
+  #img {
+    height: 100vh;
+  }
+
+  #form-field {
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid black;
+  }
+
+  @media (max-width: 480px) {
+    #form-field {
+      margin-top: 25vh;
+      margin-left: 2vw;
+      margin-right: 2vw;
+    }
+  }
+
+  #register-field {
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    margin: auto;
+  }
+</style>

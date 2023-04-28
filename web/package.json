@@ -1,7 +1,7 @@
 {
-  "name": "user",
+  "name": "web",
   "version": "1.0.0",
-  "description": "Provides login and registration services via MongoDB.",
+  "description": "Web Server for the Sandbox Site",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,10 +10,11 @@
   "author": "Andrew Chaney",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.1.0",
-    "body-parser": "^1.18.1",
-    "express": "^4.15.4",
-    "mongodb": "^3.5.3",
-    "redis": "^4.6.5"
+    "axios": "^1.1.3",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "ejs-lint": "^2.0.0",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3"
   }
 }
