@@ -5,3 +5,4 @@ RUN npm install
 COPY server.js /opt/server/
 COPY /views /opt/server/views
 CMD ["node", "server.js"]
+EXPOSE 3000

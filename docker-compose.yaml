@@ -3,6 +3,7 @@ services:
   web:
     build:
       context: web
+    image: ${REPO}_web:${TAG}
     ports:
       - "3000:3000"
     environment:
@@ -17,11 +18,15 @@ services:
   mongodb:
     build:
       context: mongodb
+    image: ${REPO}_mongodb:${TAG}
+    ports:
+      - "27017:27017"
     networks:
       - sandbox-site-network
   user:
     build: 
       context: user
+    image: ${REPO}_user:${TAG}
     depends_on:
       - mongodb
     ports:
